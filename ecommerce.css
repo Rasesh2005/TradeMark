@@ -88,7 +88,9 @@ img{
 .section{
 	padding: 3rem 0;
 }
-
+.float1{
+	position: absolute;
+}
 .section-title{
 	font-size: var(--h2-font-size);
 	color: var(--dark-color);
@@ -121,7 +123,6 @@ img{
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: var(--z-fixed);
 	background-color: var(--gray-color);
 }
 
@@ -186,7 +187,10 @@ img{
 .show{
 	right: 0;
 }
-
+.new__img1{
+	height: 13rem;
+	padding: 20px;
+}
 .active{
 	color: var(--first-color);
 }
@@ -327,7 +331,22 @@ img{
 	text-transform: uppercase;
 	font-size: var(--normal-font-size);
 }
-
+.ww{
+	display: flex;
+	flex-direction: column ;
+	align-items: center;
+	justify-content: center;
+}
+body{
+	overflow-x: hidden !important;
+}
+.end1{
+	width: 9rem !important;
+	display: flex;
+	margin-top: 5px;
+	font-size: 1.3rem;
+	justify-content: center;
+}
 .featured__preci{
 	color: var(--dark-color-light);
 	background-color: #f7d794;
@@ -337,7 +356,7 @@ img{
 
 /*<!--===OFFER===-->*/
 .offer__bg{
-	background: url(img/offer.jpg) no-repeat center/cover;
+	background: url(https://github.com/parth-kabra/Ecommerce_Website/blob/main/img/offer.jpg?raw=true) no-repeat center/cover;
 	text-align: center;
 }
 
@@ -445,7 +464,9 @@ img{
 .sponsors__logo img:hover{
 	filter: none;
 }
-
+a: hover{
+	cursor: pointer;
+}
 /*<!--===FOOTER===-->*/
 .footer{
 	background-color: var(--dark-color);
@@ -470,23 +491,10 @@ img{
 	width: 100px;
 }
 
-.footer__link, .footer__social{
+.footer__link{
 	color: var(--dark-color-light);
 }
 
-.footer__link:hover{
-	text-decoration: underline;
-}
-
-.footer__social{
-	font-size: 1.5rem;
-	margin-right: var(--mb-1);
-	transition: .3s;
-}
-
-.footer__social:hover{
-	color: var(--first-color);
-}
 
 
 /*<!--===MEDIA QUERIES===-->*/
@@ -601,4 +609,56 @@ img{
 	.offer__title{
 	font-size: 2.5rem;
 }
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar{
+	color: white;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
 }
